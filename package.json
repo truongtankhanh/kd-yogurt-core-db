@@ -1,0 +1,40 @@
+{
+  "name": "@kd-yogurt/core-db",
+  "version": "0.1.0",
+  "description": "KD Yogurt — TypeORM entities and seed data (PostgreSQL, code-first). DB schema is managed via plain SQL scripts in sql/",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "build:watch": "tsc -p tsconfig.build.json --watch",
+    "seed": "ts-node -r tsconfig-paths/register src/seeds/index.ts",
+    "seed:fresh": "ts-node -r tsconfig-paths/register src/seeds/index.ts --fresh",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:fix": "npm run format && npm run lint"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.20.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": ">=0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "typeorm": ">=0.3.0"
+  }
+}

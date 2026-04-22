@@ -1,10 +1,4 @@
-# @kd-yogurt/core-db
-
-Shared database package for the KD-Yogurt monorepo.
-Contains the TypeORM entities, enums, and seed data for MySQL 8.0.
-Database schema is managed via plain SQL scripts in `sql/` — no ORM migration runner is used.
-
----
+# AGENTS.md
 
 ## Scope and Ground Truth
 
